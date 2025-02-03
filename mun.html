@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unleashing Javascript</title>
+    <!-- favicon -->
+     <link rel="icon" href="c1-assets/logo-header.png" type="images/x-icon">
+        <!-- Daisy UI + Tailwind CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        function negative() {
+            alert('My name is not Muntasir Hamid Khan');
+        }
+        function positive() {
+            alert('My name is Muntasir Hamid Khan');
+        }
+
+    </script>
+    <style>
+        @keyframes keyframeName{
+            0%{
+                color:rgb(110, 102, 9);
+            }
+            50%{
+                color: red;
+            }
+            75%{
+                color: green;
+            }
+            100%{
+                color: blue;
+            }
+        }
+        .animationClass {
+            animation: keyframeName 6s infinite ease-in-out;
+        }
+        @keyframes moveButton1 {
+            0% {
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(-150px);
+            }
+            100% {
+                transform: translateX(150px);
+            }
+        }
+        .moveButton1Class {
+            animation: moveButton1 3s infinite alternate ease-in-out;
+        }
+        @keyframes moveButton2 {
+            0% {
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(150px);
+            }
+            100% {
+                transform: translateX(-150px);
+            }
+        }
+        .moveButton2Class {
+            animation: moveButton2 3s infinite alternate ease-in-out;
+        }
+        @keyframes shadowPulse {
+        0% { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+        50% { box-shadow: 0px 0px 40px rgba(0, 0, 255, 0.6); }
+        100% { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+        }
+
+        .animated-box {
+            background-color: #3498db;
+            animation: shadowPulse 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="md:container mx-auto text-center py-10">
+    <!-- Grand Section -->
+    <section class=" flex justify-center gap-5 py-10">
+        <!-- Grandfather card -->
+        <div class="space-y-5 bg-gray-300 w-5/12 rounded-xl border-[3px] border-emerald-600 p-5 animated-box">
+            <h1 class="text-3xl font-semibold mx-auto animationClass">Hello! tell me what's your name?</h1>
+            <button class="bg-green-500 font-bold hover:bg-yellow-400 font-mono text-white rounded-lg py-4 px-8 moveButton1Class" onclick="positive()">Right Answer</button>
+            <br>
+            <button class="bg-red-500 font-bold hover:bg-yellow-400 font-mono text-white rounded-lg py-4 px-8 moveButton2Class" onclick="negative()">Wrong Answer</button>
+        </div>
+        <!-- Grandmother card -->
+        <div class="space-y-5 bg-gray-300 w-5/12 rounded-xl border-[3px] border-emerald-600 p-5 animated-box">
+            <h1 class="text-3xl font-semibold mx-auto animationClass">Hello! tell me what's your name?</h1>
+            <button class="bg-green-500 font-bold hover:bg-yellow-400 font-mono text-white rounded-lg py-4 px-8 moveButton1Class" onclick="positive()">Right Answer</button>
+            <br>
+            <button class="bg-red-500 font-bold hover:bg-yellow-400 font-mono text-white rounded-lg py-4 px-8 moveButton2Class" onclick="negative()">Wrong Answer</button>
+        </div>
+    </section>
+</body>
+</html>
